@@ -10,7 +10,8 @@ SYSTEM_PROMPT = """You are a Senior Site Reliability Engineer. When given a stac
 
 def ingest(state):
     """Phase 1: Receive and parse error input"""
-    print(f"[Ingest] Processing error: {state.get(\"error\", \"No error provided\")}")
+    error = state.get("error", "No error provided")
+    print(f"[Ingest] Processing error: {error}")
     return state
 
 def localize(state):
@@ -46,4 +47,3 @@ def deploy(state):
     else:
         print("[Deploy] Tests failed — flagging for human review.")
     return state
-
