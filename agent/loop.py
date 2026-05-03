@@ -2,11 +2,20 @@
 BugFixerAgent — LangGraph agentic loop
 Phases: Ingest → Localize → Hypothesize → Draft → Validate → Deploy
 """
+from typing import TypedDict, Optional
 from langgraph.graph import StateGraph
 from agent.nodes import ingest, localize, hypothesize, draft_patch, validate, deploy
 
+
+class AgentState(TypedDict, total=False):
+    error: Optional[str]
+    iterations: int
+    max_iterations: int
+    validated: bool
+
+
 def build_graph():
-    graph = StateGraph()
+    graph = StateGraph(AgentState)
     graph.add_node("ingest", ingest)
     graph.add_node("localize", localize)
     graph.add_node("hypothesize", hypothesize)
@@ -23,6 +32,7 @@ def build_graph():
 
     return graph.compile()
 
+
 class BugFixerAgent:
     MAX_ITERATIONS = 5  # Safety: hard cap on retry loops
 
@@ -31,6 +41,9 @@ class BugFixerAgent:
         self.graph = build_graph()
 
     def run(self, error_input=None):
-        state = {"error": error_input, "iterations": 0, "max_iterations": self.MAX_ITERATIONS}
+        state = AgentState(
+            error=error_input,
+            iterations=0,
+            max_iterations=self.MAX_ITERATIONS
+        )
         return self.graph.invoke(state)
-
