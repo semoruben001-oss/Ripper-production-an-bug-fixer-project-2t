@@ -1,10 +1,6 @@
 # 🤖 NA Bug-Fixer
 
-> **AI that finds, fixes, and validates bugs automatically — before your team even wakes up.**
-
-[![Request a Demo](https://img.shields.io/badge/Request%20a%20Demo-4CAF50?style=for-the-badge&logo=google-chrome&logoColor=white)](https://untitled-app-cbf191a2.base44.app/LeadForm)
-[![Pricing](https://img.shields.io/badge/View%20Pricing-1a1a2e?style=for-the-badge&logo=google-chrome&logoColor=white)](https://untitled-app-cbf191a2.base44.app/Pricing)
-
+> **AI that finds, fixes, and validates bugs automatically — before your team even wakes up.** -/$299/$799/ custom 
 ---
 
 ## What is NA Bug-Fixer?
