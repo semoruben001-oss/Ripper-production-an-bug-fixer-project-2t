@@ -98,14 +98,9 @@ You are a Senior Site Reliability Engineer. When given a stack trace, follow the
 
 ---
 
-## Pricing
-
-| Plan | Price | Best For |
-|------|-------|----------|
-| Starter | $299/mo | Small teams |
-| Pro | $799/mo | Fast-moving engineering orgs |
-| Enterprise | Custom | Large orgs, on-prem |
-
+| Starter | $79/mo | Up to 1,000 runs · $0.08 per extra run · up to 3 seats |
+| Professional | $349/mo | Up to 10,000 runs · $0.05 per extra run · up to 15 seats |
+| Scale | $899/mo | Up to 35,000 runs · $0.03 per extra run · unlimited seats |
 ---
 
 ## 🚀 Get Started
