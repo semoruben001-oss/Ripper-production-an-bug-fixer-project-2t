@@ -1,6 +1,6 @@
 # 🤖 NA Bug-Fixer
 
-> **AI that finds, fixes, and validates bugs automatically — before your team even wakes up.** -/$299/$799/ custom 
+> **AI that finds, fixes, and validates bugs automatically — before your team even wakes up.** -/79$/349$/899$
 ---
 
 ## What is NA Bug-Fixer?
