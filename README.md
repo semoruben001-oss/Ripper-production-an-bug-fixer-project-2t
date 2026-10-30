@@ -110,7 +110,7 @@ You are a Senior Site Reliability Engineer. When given a stack trace, follow the
 
 ## 🚀 Get Started
 
-[![Request a Free Demo](https://img.shields.io/badge/Request%20a%20Free%20Demo-4CAF50?style=for-the-badge&logo=google-chrome&logoColor=white)](https://untitled-app-cbf191a2.base44.app/LeadForm)
+ 
 
 Or email: **ripperrip667@gmail.com**
 
