@@ -16,7 +16,7 @@ def main():
     else:
         from gui.app import launch_gui
         launch_gui(agent)
-
+app=agent 
 if __name__ == "__main__":
     main()
 
