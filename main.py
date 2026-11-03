@@ -5,7 +5,7 @@ Dual-mode: GUI (default) or Headless/CI-CD (RUN_HEADLESS=True)
 """
 import os
 from agent.loop import BugFixerAgent
-app=BugFixeragent)
+app=BugFixerAgent)
 def main():
     headless = os.getenv("RUN_HEADLESS", "False").lower() == "true"
     (headless=headless)
