@@ -86,7 +86,7 @@ You are a Senior Site Reliability Engineer. When given a stack trace, follow the
 ```
 
 ---
-
+ 
 ## CLI Triggers
 
 | Command | Action |
