@@ -1,14 +1,15 @@
-#!/usr/bin/env python3
-"""
-NA Bug-Fixer — Entry Point
-Dual-mode: GUI (default) or Headless/CI-CD (RUN_HEADLESS=True)
-"""
-import os from fastapi import FastApi
+import os
+from fastapi import FastAPI
 from agent.loop import BugFixerAgent
-app=FastApi()
-@app.get("/");
-aysnc def root():
-        return "Agent is running"
+
+app = FastAPI()
+
+
+@app.get("/")
+async def root():
+    return {"status": "Agent is running"}
+
+
 def main():
     headless = os.getenv("RUN_HEADLESS", "False").lower() == "true"
     agent = BugFixerAgent(headless=headless)
@@ -20,4 +21,8 @@ def main():
         from gui.app import launch_gui
         launch_gui(agent)
 
+
+if __name__ == "__main__":
+    main()
+```
 
