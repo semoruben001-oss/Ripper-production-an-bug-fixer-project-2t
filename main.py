@@ -19,5 +19,3 @@ def main():
         launch_gui(agent)
 
 
-if __name__ == "__main__":
-    main()
