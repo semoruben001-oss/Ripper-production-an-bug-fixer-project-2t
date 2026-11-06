@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-NA Bug-Fixer — Entry Point
+NA Bug-Fixer — Entry Point 
 Dual-mode: GUI (default) or Headless/CI-CD (RUN_HEADLESS=True)
 """
 import os
