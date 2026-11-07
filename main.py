@@ -1,6 +1,6 @@
 import os
 
-from fastapi import FastAPI,Request,HTTPExecption,Header
+from fastapi import FastAPI,Request,HTTPException,Header
 from agent . loop import BugFixerAgent
 
 app = FastAPI()
