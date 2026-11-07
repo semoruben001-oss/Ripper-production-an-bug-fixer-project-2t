@@ -23,7 +23,7 @@ No engineer gets paged. No 3am firefighting. Just a PR waiting in the morning.
 Error Alert (GitHub / Sentry)
         │
         ▼
-  Context Indexing (LangChain RAG)
+  Context Indexing (LangChain RAG) 
         │
         ▼
   Root Cause Analysis (Claude / GPT-5)
