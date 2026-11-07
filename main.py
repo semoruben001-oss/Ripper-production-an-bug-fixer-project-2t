@@ -6,7 +6,7 @@ from agent . loop import BugFixerAgent
 app = FastAPI()
 
 
-@app.get("/")
+@app.get("/") 
 async def root():
     return {"status": "Agent is running"}
 
