@@ -1,4 +1,4 @@
-// package.json
+
 {
   "scripts": {
     "build": "docusaurus build",
