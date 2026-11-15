@@ -33,10 +33,15 @@ def validate(state):
     """Phase 5: Run tests in Docker sandbox"""
     import subprocess
     print("[Validate] Running test suite in Docker...")
-    result = subprocess.run(
-        ["docker", "run", "--rm", "-v", f"{__file__}:/app", "my-test-runner", "pytest"],
-        capture_output=True
-    )
+    try:
+        result = subprocess.run(
+            ["docker", "run", "--rm", "-v", f"{__file__}:/app", "my-test-runner", "pytest"],
+            capture_output=True
+        )
+    except FileNotFoundError:
+        print("[Validate] Docker is not available — skipping sandbox validation.")
+        state["validated"] = False
+        return state
     state["validated"] = result.returncode == 0
     return state
 
