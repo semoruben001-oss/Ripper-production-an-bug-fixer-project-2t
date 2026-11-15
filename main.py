@@ -1,12 +1,12 @@
 import os
 
-from fastapi import FastAPI,Request,HTTPException,Header
-from agent . loop import BugFixerAgent
+from fastapi import FastAPI
+from agent.loop import BugFixerAgent
 
 app = FastAPI()
 
- 
-@app.get("/") 
+
+@app.get("/")
 async def root():
     return {"status": "Agent is running"}
 
@@ -19,10 +19,15 @@ def main():
         print("[NA Bug-Fixer] Running in headless/CI-CD mode...")
         agent.run()
     else:
-        from gui.app import launch_gui
+        try:
+            from gui.app import launch_gui
+        except ImportError:
+            raise SystemExit(
+                "[NA Bug-Fixer] GUI mode needs the gui/ package, which is not "
+                "installed. Run headless instead: RUN_HEADLESS=true python main.py"
+            )
         launch_gui(agent)
 
 
 if __name__ == "__main__":
     main()
-
