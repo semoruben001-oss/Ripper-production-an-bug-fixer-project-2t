@@ -5,6 +5,15 @@ from agent.loop import BugFixerAgent
 
 app = FastAPI()
 
+try:
+    from api.stripe_checkout import router as stripe_checkout_router
+    from api.stripe_webhook import router as stripe_webhook_router
+
+    app.include_router(stripe_checkout_router)
+    app.include_router(stripe_webhook_router)
+except ImportError as exc:
+    print(f"[NA Bug-Fixer] Stripe billing routes not loaded: {exc}")
+
 
 @app.get("/")
 async def root():
