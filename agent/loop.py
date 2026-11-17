@@ -12,6 +12,12 @@ class AgentState(TypedDict, total=False):
     iterations: int
     max_iterations: int
     validated: bool
+    repo_path: Optional[str]
+    traceback_refs: list
+    files: list
+    root_cause: Optional[str]
+    patch: Optional[dict]
+    patch_path: Optional[str]
 
 
 def build_graph():
@@ -40,10 +46,11 @@ class BugFixerAgent:
         self.headless = headless
         self.graph = build_graph()
 
-    def run(self, error_input=None):
+    def run(self, error_input=None, repo_path=None):
         state = AgentState(
             error=error_input,
             iterations=0,
-            max_iterations=self.MAX_ITERATIONS
+            max_iterations=self.MAX_ITERATIONS,
+            repo_path=repo_path,
         )
         return self.graph.invoke(state)
